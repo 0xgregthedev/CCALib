@@ -5,7 +5,7 @@ import {Test} from "forge-std/Test.sol";
 import {console} from "forge-std/console.sol";
 import {CCA} from "src/CCA.sol";
 
-abstract contract CCATest is Test, CCA {
+abstract contract CCATest is Test {
     bytes internal args;
 
     function bytecode() internal pure virtual returns (bytes memory) {}

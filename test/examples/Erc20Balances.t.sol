@@ -3,9 +3,11 @@ pragma solidity ^0.8.13;
 
 import {Erc20BalancesCCA, IERC20} from "examples/Erc20Balances.sol";
 import {CCATest, console} from "test/CCATest.sol";
+import {CCA} from "src/CCA.sol";
 import {MockERC20} from "solady/test/utils/mocks/MockERC20.sol";
 
-contract Erc20BalancesCCATest is CCATest {
+
+contract Erc20BalancesCCATest is CCATest, CCA {
     function bytecode() internal pure override returns (bytes memory) {
         return type(Erc20BalancesCCA).creationCode;
     }
